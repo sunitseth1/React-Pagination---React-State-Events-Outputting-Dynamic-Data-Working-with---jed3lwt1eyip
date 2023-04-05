@@ -1,11 +1,11 @@
-import React from 'react'
-const PaginationButtonsList = () => {
+import React from "react";
 
-    return (
-        <div className="pagination-buttons-list">
+const Button = ({page, text, id, handlePage}) => {
+  return (
+    <button className={page == text ? "active-btn" : null} id={id} onClick={() => handlePage(text)}>
+      {text}
+    </button>
+  );
+};
 
-        </div>
-    )
-}
-
-export { PaginationButtonsList }
+export default Button;
